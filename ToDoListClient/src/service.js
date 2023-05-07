@@ -3,9 +3,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 //axios.defaults.baseURL = process.env.apiUrl;
 const apiClient=axios.create({
-  baseURL:process.env.REACT_API_URL
+  baseURL:process.env.REACT_APP_API_URL
 })
-console.log('process.env.REACT_API_URL', process.env.REACT_API_URL)
+console.log('process.env.REACT_API_URL', process.env.REACT_APP_API_URL)
 //axios.create();
 
 export default {
