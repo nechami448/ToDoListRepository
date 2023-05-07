@@ -5,6 +5,8 @@ dotenv.config();
 const apiClient=axios.create({
   baseURL:process.env.apiUrl
 })
+console.log('process.env.API_URL', process.env.apiUrl)
+
 //axios.create();
 
 export default {
@@ -48,14 +50,14 @@ axios.interceptors.response.use(function (response) {
   // Any status code that lie within the range of 2xx cause this function to trigger
   // Do something with response data
   // console.log("OK");
+  console.log("response",response)
   return response;
 }, function (error) {
   // Any status codes that falls outside the range of 2xx cause this function to trigger
   // Do something with response error
-  console.error(error);
+  console.error("error",error);
   return Promise.reject(error);
 });
-
 
 
 
